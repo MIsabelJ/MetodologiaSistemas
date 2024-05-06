@@ -12,6 +12,7 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -28,9 +29,9 @@ public class PromocionDto extends BaseDto {
     private String descripcionDescuento;
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
-    private Set<ArticuloManufacturado> articulosManufacturado;
-    private Set<ArticuloInsumo> articulosInsumo;
-    private Set<ImagenPromocion> imagenes;
-    private Set<Sucursal> sucursales;
+    private Set<ArticuloManufacturado> articulosManufacturado = new HashSet<>();
+    private Set<ArticuloInsumo> articulosInsumo = new HashSet<>();
+    private Set<ImagenPromocion> imagenes = new HashSet<>();
+    private Set<Sucursal> sucursales = new HashSet<>();
 
 }

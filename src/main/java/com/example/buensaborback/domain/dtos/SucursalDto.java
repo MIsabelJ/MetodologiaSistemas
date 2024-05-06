@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalTime;
+import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -20,9 +21,9 @@ public class SucursalDto extends BaseDto {
     private LocalTime horarioCierre;
     private boolean esCasaMatriz;
     private Domicilio domicilio;
-    private Set<Categoria> categorias;
-    private Set<Pedido> pedidos;
-    private Set<Promocion> promociones;
+    private Set<Categoria> categorias = new HashSet<>();
+    private Set<Pedido> pedidos = new HashSet<>();
+    private Set<Promocion> promociones = new HashSet<>();
     private Empresa empresa;
 
 }
